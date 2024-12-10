@@ -109,7 +109,7 @@ class Cat extends Animal {
     }
 }
 
-public class ApstractClass {
+public class AbstractClass {
     public static void main(String[] args) {
         Animal dog = new Dog("Rufus");
         Animal cat = new Cat("Mittens");
