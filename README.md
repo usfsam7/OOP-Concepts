@@ -5,7 +5,7 @@ The OOP Concepts in Java repository is a comprehensive resource for understandin
 ## Features
 
 - Demonstrates **Encapsulation**, **Inheritance**, **Polymorphism**, and **Abstraction**.
-- Covers the use of **Interfaces** and **Abstract Classes**.
+- Covers **Interfaces** and **Abstract Classes**.
 - Provides examples for **Method Overloading** and **Method Overriding**.
 - Hands-on examples with comments for easy understanding.
 
