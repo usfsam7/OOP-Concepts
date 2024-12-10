@@ -38,28 +38,8 @@
  
    package Abstraction;
 
+
   // example 1
-
-  abstract class Shape{  
-      abstract void draw();  
-    }  
-   
-    class Rectangle extends Shape{  
-       void draw(){System.out.println("drawing rectangle");}  
-    }  
-    class Circle1 extends Shape{  
-       void draw(){System.out.println("drawing circle");}  
-    }  
-   
-    class TestAbstraction1{  
-    public static void main(String args[]){  
-      Shape s = new Circle1();
-       s.draw();  
-    }  
-  }  
-
-
-  // example 2
 
   abstract class Bank {
     abstract int getRateOfInterest();
@@ -85,6 +65,73 @@
 
     }
   }
+
+
+
+   // example 2
+
+   abstract class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+    public void eat() {
+     System.out.println(name + " Eating food!");
+    }
+    abstract protected void makeSound();
+}
+
+  class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+     @Override
+    protected void makeSound() {
+        System.out.println(name + " barks");
+    }
+    protected void dogBehaviour() {
+     System.out.println("anything dog does!");
+    }
+}
+
+class Cat extends Animal {
+ protected Cat(String name) {
+        super(name);
+    }
+     
+    @Override
+    protected void makeSound() {
+        System.out.println(name + " meows");
+    }
+    protected void catBehaviour() {
+     System.out.println("anything cat does!");
+    }
+}
+
+public class ApstractClass {
+    public static void main(String[] args) {
+        Animal dog = new Dog("Rufus");
+        Animal cat = new Cat("Mittens");
+
+        dog.makeSound();
+        dog.eat();
+        cat.makeSound();
+        cat.eat();
+    }
+}
+ 
+  /*
+   * In this example, the Animal class is an abstract class that cannot be instantiated on its own. It has an abstract method makeSound() that must be implemented by its concrete subclasses Dog and Cat. The Dog and Cat classes extend the Animal class and provide an implementation for the makeSound() method.
+    
+
+   * What are the implementation details of the concrete classes that are hidden in the client?
+   
+   The implementation details of the concrete classes refer to the specific behavior and characteristics that make each class unique. In the example code, the concrete classes Dog and Cat have their unique implementations of the makeSound method, as well as their additional methods (dogBehaviour and catBehaviour).
+   */
+
+
+
 
 
     // note : look at the interface section first before reading this ex.
