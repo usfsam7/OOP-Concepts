@@ -47,8 +47,8 @@ class Sum {
         return a + b;
     } 
 
-    double add (double a, double b) {
-        return a + b;
+    double add (double a, double b, double c) {
+        return a + b + c;
     }
 }
 
@@ -56,7 +56,7 @@ class ComileTimePolymorphism {
     public static void main(String[] args) {
         Sum s = new Sum();
        System.out.println(s.add(5, 5));
-       System.out.println(s.add(4.5, 5.5));  
+       System.out.println(s.add(4.5, 5.5, 3.3));  
     }
 }
 
